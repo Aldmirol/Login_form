@@ -20,6 +20,12 @@ export default {
 </script>
 
 <style scoped>
+    @font-face {
+        font-family: 'Bullet';
+        src:
+            url('../../assets/fonts/bullet.otf') format('otf')
+}
+
     .login-input {
         height: 100%;
         width: 75%;
@@ -28,5 +34,10 @@ export default {
         font-size: 1.2rem;
         border: none;
         outline: none;
+        font-family: 'Bullet';
     }
+
+    /* .bullet-text {
+
+    } */
 </style>

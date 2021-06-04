@@ -44,8 +44,8 @@
                 </div>
             </div>
             <div class="buttons-container">
-                <button class="forgot-password"></button>
-                <button class="submit-form"></button>
+                <span class="buttons-title">Забыли пароль?</span>
+                <button class="submit-button" type="submit">Войти</button>
             </div>
         </form>
     </div>
@@ -120,7 +120,8 @@ export default {
     }
 
     .login-wrapper,
-    .password-wrapper {
+    .password-wrapper,
+    .buttons-container {
         height: 20%;
         width: 90%;
     }
@@ -178,5 +179,29 @@ export default {
         width: 0;
     }
 
+    .buttons-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
 
+    .buttons-title {
+        font-size: 0.9rem;
+        color: #1E96D8;
+        cursor: pointer;
+    }
+
+    .buttons-title:hover {
+        text-decoration: underline;
+    }
+
+    .submit-button {
+        height: 35%;
+        background-color: #09527B;
+        border: none;
+        border-radius: 0.25rem;
+        font-size: 1rem;
+        color: #ffffff;
+        cursor: pointer;
+    } 
 </style>
