@@ -1,8 +1,9 @@
 <template>
     <input type="text"
-        :class="classList"
+        :class="classes"
         :placeholder="placeholder"
         v-maska="maskPattern"
+        :maxlength="maxLength"
     >
 </template>
 
@@ -14,18 +15,21 @@ export default {
         classList: Array,
         placeholder: String,
         maskPattern: String,
+        isHidden: Boolean,
+        maxLength: Number
+    },
+    computed: {
+        classes() {
+            const classes = [...this.classList, this.isHidden ? 'bullet-text' : ''];
+
+            return classes;
+        }
     },
     directives: { maska },
-}
+}   
 </script>
 
 <style scoped>
-    @font-face {
-        font-family: 'Bullet';
-        src:
-            url('../../assets/fonts/bullet.otf') format('otf')
-}
-
     .login-input {
         height: 100%;
         width: 75%;
@@ -34,10 +38,9 @@ export default {
         font-size: 1.2rem;
         border: none;
         outline: none;
-        font-family: 'Bullet';
     }
 
-    /* .bullet-text {
-
-    } */
+    .bullet-text {
+        font-family: 'bullet', sans-serif;
+    }
 </style>

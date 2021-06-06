@@ -17,6 +17,11 @@ export default {
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+@font-face {
+    font-family: 'bullet';
+    src: url('./assets/fonts/Bullet/bullets .otf');
+}
+
 
 #app {
   height: 100vh;

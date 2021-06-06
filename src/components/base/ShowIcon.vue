@@ -8,7 +8,7 @@
 export default {
     props: {
         classList: Array,
-        isShown: Boolean
+        isShown: Boolean,
     },
     data() {
         return {
