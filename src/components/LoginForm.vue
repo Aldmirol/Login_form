@@ -35,6 +35,8 @@
                 <div class="password-container">
                     <BaseInput
                         :classList="passwordInput.classList"
+                        :isHidden="passwordInput.isHidden"
+                        :maxLength="passwordInput.maxLength"
                     />
                     <ShowIcon
                         :classList="showIcon.classList"
@@ -69,7 +71,9 @@ export default {
                 placeholder: '000 000 00 00'
             },
             passwordInput: {
-                classList: ['login-input']
+                classList: ['login-input'],
+                isHidden: true,
+                maxLength: 8
             },
             countryList: {
                 classList: ['hidden-list'],
@@ -86,7 +90,8 @@ export default {
             return this.countryList.isActive = !this.countryList.isActive;
         },
         showPassword() {
-            return this.showIcon.isShown = !this.showIcon.isShown;
+            this.passwordInput.isHidden = !this.passwordInput.isHidden;
+            this.showIcon.isShown = !this.showIcon.isShown;
         }
     }
 }
